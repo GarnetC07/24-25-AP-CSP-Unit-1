@@ -13,6 +13,11 @@ for s in turtle_shapes:
   t = trtl.Turtle(shape=s)
   my_turtles.append(t)
 
+
+direction = 90
+t.setheading(direction)
+direction = t.heading()
+
 #
 startx = 0
 starty = 0
