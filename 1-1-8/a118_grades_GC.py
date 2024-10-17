@@ -15,6 +15,7 @@ for course in my_courses:if (points >= 90):
 elif (points >= 80):
   print("B")
 elif (points >= 70):
+
   print("C")
 elif (points >= 60):
   print("D")
