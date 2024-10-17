@@ -7,10 +7,11 @@ def draw_sides():
     light.right(90)
     light.forward(300)
     light.right(90)
-    ligh
+    
 light.begin_fill()
 draw_sides()
 draw_sides()
+light.end_fill()
 
 light.goto(50,-40)
 light.shape("circle")
