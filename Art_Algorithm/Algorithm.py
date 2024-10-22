@@ -24,6 +24,7 @@ light.end_fill()
 #Made pole from the bottom of the light going to the ground
 def draw_pole():
     light.goto(0,0)
+    light.goto(0,0)
     light.forward(12.5)
     light.right(90)
     light.forward(300)
