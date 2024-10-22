@@ -1,7 +1,7 @@
 import turtle as trtl
 import random
 
-# named turtle light
+# named turtle light and set turtle speed as well as made the background color blue
 light = trtl.Turtle()
 light.speed("fastest")
 light.screen.bgcolor("lightblue")
@@ -20,12 +20,27 @@ draw_sides()
 #end fill on object
 light.end_fill()
 
+#Made pole from the bottom of the light going to the ground
+def draw_pole():
+    light.goto(0,0)
+    light.forward(12.5)
+    light.right(90)
+    light.forward(300)
+    light.right(90)
+    light.forward(22)
+    light.right(90)
+    light.forward(300)
+#filled in the light pole
+light.begin_fill()
+draw_pole()
+light.end_fill()
 
+#Made the grass
 light.penup()
 light.goto(-500, -400)
 light.pensize(7)
 light.color("green")
-#Drawing the randomized blades of grass.
+#Set the randomized blades of grass.
 
 def draw_grass():
     length = random.randint(85, 140)
@@ -42,7 +57,7 @@ def draw_grass():
 for blades in range(100):
     draw_grass()
 
-#Made the yellow light for the traffic light
+#Made the red light for the traffic light
 light.penup()
 light.goto(40,250)
 light.color("red")
@@ -51,6 +66,7 @@ light.begin_fill()
 light.circle(40)
 light.end_fill()
 
+#Made the yellow light for the traffic light
 light.penup()
 light.goto(40,150)
 light.color("yellow")
@@ -59,6 +75,7 @@ light.begin_fill()
 light.circle(40)
 light.end_fill()
 
+#Made the green light for the traffic light
 light.penup()
 light.goto(40,50)
 light.color("green")
