@@ -4,7 +4,8 @@ import random
 # named turtle light and set turtle speed as well as made the background color blue
 light = trtl.Turtle()
 light.speed("fastest")
-light.screen.bgcolor("lightblue")
+light.screen.bgcolor("#05BFE8")
+
 # Start of box
 light.goto(-50,300)
 def draw_sides():
@@ -83,6 +84,32 @@ light.pendown()
 light.begin_fill()
 light.circle(40)
 light.end_fill()
+
+#Made the animation for the sun progressing across the sky like how it moves throughout the day
+def draw_star(startx, starty):
+    light.penup()
+    light.goto(startx, starty)
+    light.color("#FC9601")
+    light.pendown()
+    light.begin_fill()
+    light.circle(40)
+    light.end_fill()
+
+
+# Determines how many times the sun moves across the sky
+x = -600
+y = 350
+light.speed("normal")
+for intervals in range(12):
+    draw_star(x, y)
+    for undo_number in range(4):
+        light.undo()
+    x += 100
+
+
+
+
+
 
 wn = trtl.Screen()
 wn.mainloop()
