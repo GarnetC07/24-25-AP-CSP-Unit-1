@@ -1,6 +1,6 @@
 import turtle as trtl
 import random
-
+#Garnet Cheng Cameron Weiss
 # named turtle light and set turtle speed as well as made the background color blue
 light = trtl.Turtle()
 light.speed("fastest")
